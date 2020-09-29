@@ -1,0 +1,6 @@
+# ignore all . folders but include . files
+.*/
+*.class
+*.log
+target/
+!/.gitignore
