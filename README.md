@@ -9,16 +9,16 @@ docker-compose up
 There are 2 folders for Producer and Consumer. Once the services are up, you can build the uber jar to run them.
 ```shell
 # build producer
-docker exec -it kafak-helloworld_kafka_producer_1 bash -c "cd producer && sbtssembly"
+docker exec -it kafka-helloworld_kafka-producer_1 bash -c "cd producer && sbt assembly"
 # build consumer
-docker exec -it kafka-helloworld_kafka-consumer_1 bash -c "cd consumer && sbtssembly"
+docker exec -it kafka-helloworld_kafka-consumer_1 bash -c "cd consumer && sbt assembly"
 ```
 ### run producer & consumer
 Each has to run in a separated console
 
 * Run Producer first
 ```shell
-docker exec -it kafak-helloworld_kafka_producer_1 bash -c "scala producer/target/scala-2.11/init-scala-producer"
+docker exec -it kafka-helloworld_kafka-producer_1 bash -c "scala producer/target/scala-2.11/init-scala-producer"
 ```
 * Then run Consumer
 ```shell
